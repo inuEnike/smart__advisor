@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'smartapp',
+    'oauth2_provider',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +130,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR / 'static')
 ]
+
+LOGIN_URL = 'signin'

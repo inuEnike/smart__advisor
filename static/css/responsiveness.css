@@ -152,6 +152,10 @@
     display: flex;
     flex-direction: column;
   }
+  .WOF__section {
+    margin: auto;
+  }
+
   .WOF {
     grid-template-columns: 1fr;
     text-align: center;
@@ -169,6 +173,30 @@
     line-height: 1.5;
   }
   .WOF_text__content:nth-child(1) {
+    display: none;
+  }
+  .WCU__section {
+    margin: auto;
+    display: block;
+  }
+
+  .WCU {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: 0 !important;
+  }
+  .WCU__image {
+    display: none;
+  }
+  .WCU__text h2 {
+    font-size: 2em;
+  }
+  .WCU_text__content {
+    padding: 10px;
+    text-align: justify;
+    line-height: 1.5;
+  }
+  .WCU_text__content:nth-child(1) {
     display: none;
   }
 }
@@ -202,6 +230,13 @@
   }
   footer {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 667px) {
+  .numbers {
+    flex-direction: column;
+    gap: 40px;
   }
 }
 

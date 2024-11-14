@@ -47,6 +47,11 @@ body {
   display: none !important;
 }
 
+.authenticated {
+  display: flex;
+  gap: 10px;
+}
+
 /* Sidebar */
 .sidebar__overlay {
   display: none;
@@ -607,5 +612,79 @@ iframe {
 
 .errorlist li {
   list-style: none !important ;
-  color: redss;
+  color: red;
+}
+
+/* signin  */
+.other-signin {
+  margin-top: 2rem;
+}
+aside div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+aside div img {
+  width: 35px;
+  margin-right: 10px;
+}
+
+aside div a {
+  text-decoration: none;
+  color: #141111;
+}
+
+/* why choose us  */
+.WCU__section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.WCU {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin: 0 8%;
+}
+
+.WCU__image {
+  width: 90%;
+}
+
+.WCU__image img {
+  width: 100%;
+  border-radius: 2% 20%;
+}
+
+.WCU__text h2 {
+  font-size: 3em;
+  padding: 1.5rem 0;
+  text-transform: uppercase;
+}
+
+.WCU_text__content {
+  padding: 8px 0;
+  line-height: 1.6;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+  text-align: center;
+  height: 50vh;
+  margin: 5rem 5rem;
+}
+.numbers h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.4rem;
 }

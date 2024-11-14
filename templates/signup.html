@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/reusableStyles.css' %}" />
     <link rel="stylesheet" href="{% static 'css/responsiveness.css' %}" />
+        <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'images/fav-icon.png' %}"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -48,7 +53,7 @@
               required
             />
           </div>
-          {{ form.errors.enail}}
+          {{ form.errors.email}}
 
           <div>
             <i class="fa-solid fa-lock"></i>
@@ -76,13 +81,29 @@
           <input type="submit" value="continue" class="cta-btn" />
         </form>
         <p class="create-acc">
-          Have an account?<a href="sign-in.html" class="green"> Sign in</a>
+          Have an account?<a href="{% url "signin" %}" class="green"> Sign in</a>
         </p>
       </section>
       <section class="img-cont">
         <img src="{% static 'images/DashBoard/signup.png' %}" alt="" />
       </section>
     </div>
+    <script>
+      const errors = document.querySelectorAll('.errorlist')
+
+      if (errors.length > 0) {
+      errors.forEach((error) => {
+      setTimeout(() => {
+        error.style.transition = "opacity 0.5s ease";
+        error.style.opacity = "0";
+
+      setTimeout(() => {
+        error.remove();
+      }, 500); 
+    }, 5000); 
+  });
+}
+    </script>
 
     <script src="{% static 'js/script.js' %}"></script>
   </body>

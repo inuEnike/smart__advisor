@@ -15,6 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
+        <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'images/fav-icon.png' %}"
+    />
     <title>{% block title %}My Site{% endblock %}</title>
   </head>
   <body>
@@ -27,16 +32,36 @@
           </div>
 
           <ul class="nav__items">
-            <li><a href="{% url "index" %}">Home</a></li>
-            <li><a href="{% url "about" %}">About</a></li>
-            <li><a href="#">Service</a></li>
+            <li>
+            <a href={% url "index" %}>Home</a>
+            </li>
+            <li>
+            <a href={% url "about" %}>About</a>
+            </li>
+            <li><a href="{% url "services" %}">Service</a></li>
             <li><a href="#">Project</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
 
+          {% if user.is_authenticated %}
+          <div class="authenticated">
           <div class="nav__btn btn">
-            <button class="btn">Signup</button>
+            <button class="btn">Dashboard</button>
           </div>
+            <div class="nav__btn btn">
+              <a href="{% url "signout" %}">
+            <button class="btn">Logout</button>
+          </a>
+          </div>
+          </div>
+          {% else %}
+          <div class="nav__btn btn">
+              <a href="{% url "signup" %}">
+                <button class="btn">Signup</button>
+            </a>
+      </div>
+            
+          {% endif %}
           <div class="nav__icon"><i class="fa-solid fa-bars"></i></div>
         </div>
       </header>
