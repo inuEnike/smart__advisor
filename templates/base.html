@@ -39,8 +39,8 @@
             <a href={% url "about" %}>About</a>
             </li>
             <li><a href="{% url "services" %}">Service</a></li>
-            <li><a href="#">Project</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="{% url "projects" %}">Project</a></li>
+            <li><a href="{% url "contact" %}">Contact</a></li>
           </ul>
 
           {% if user.is_authenticated %}

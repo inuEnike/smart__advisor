@@ -16,6 +16,12 @@ def about(request):
 def services(request):
     return render(request, 'services.html')
     
+def projects(request):
+    return render(request, 'projects.html')
+   
+def contact(request):
+    return render(request, 'contact.html')
+    
     
 def signup(request):
     form = UserCreationForm()
